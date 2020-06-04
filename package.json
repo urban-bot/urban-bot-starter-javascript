@@ -12,25 +12,31 @@
     "dist/**/*"
   ],
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "dev": "nodemon",
     "lint": "eslint \"./src/**\"",
     "lint:fix": "npm run lint -- --fix",
-    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "start": "node dist/index.js",
     "start-tunnel": "ngrok http 8080",
     "test": "jest"
   },
   "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
     "@urban-bot/core": "0.0.7",
     "@urban-bot/facebook": "0.0.7",
     "@urban-bot/slack": "0.0.7",
     "@urban-bot/telegram": "0.0.7",
-    "cross-env": "^7.0.2",
+    "babel-loader": "^8.1.0",
     "dotenv": "^8.2.0",
-    "react": "^16.13.1"
+    "eslint": "^6.8.0",
+    "file-loader": "^6.0.0",
+    "react": "^16.13.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.8.2",
@@ -44,5 +50,38 @@
   },
   "engines": {
     "node": ">=10.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "10"
+          }
+        }
+      ],
+      "@babel/react"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 4,
+    "arrowParens": "always",
+    "endOfLine": "lf"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "js",
+    "exec": "webpack && node ./dist/index.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "rootDir": "src"
   }
 }

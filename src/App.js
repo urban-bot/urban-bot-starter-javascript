@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Router, Text, ButtonGroup, Button, useText } from '@urban-bot/core';
+import { Route, Router, Text, ButtonGroup, Button, useText, Image } from '@urban-bot/core';
+import penguinFromFile from './assets/penguin.jpg';
 
 function Echo() {
     const [text, setText] = React.useState('Say something');
@@ -9,23 +10,27 @@ function Echo() {
     });
 
     return (
-        <Text isNewMessageEveryRender>
+        <Text>
             <i>{text}</i>
         </Text>
     );
 }
 
 function Counter() {
-    const [count, setCount] = React.useState(0);
+    const [image, setImage] = React.useState(penguinFromFile);
+    const penguinFromURL = 'https://ibb.co/GR241dP';
 
-    const increment = () => setCount(count + 1);
-    const decrement = () => setCount(count - 1);
+    const toggleImage = () => setImage(image === penguinFromFile ? penguinFromURL : penguinFromFile);
 
     return (
-        <ButtonGroup title={count}>
-            <Button onClick={increment}>+1</Button>
-            <Button onClick={decrement}>-1</Button>
-        </ButtonGroup>
+        <Image
+            file={image}
+            buttons={
+                <ButtonGroup title="Penguin">
+                    <Button onClick={toggleImage}>Toggle penguin</Button>
+                </ButtonGroup>
+            }
+        />
     );
 }
 
@@ -35,7 +40,7 @@ export function App() {
             <Route path="/start">
                 <Echo />
             </Route>
-            <Route path="/counter">
+            <Route path="/image">
                 <Counter />
             </Route>
         </Router>

@@ -34,9 +34,9 @@ npx create-urban-bot my-app
 #### `npm run build`
 Build your code to `dist` folder.
 #### `npm run dev`
-Build and start your code after every code changes. Settings are inside `nodemon.json`.
+Build and start your code after every code changes. Settings are inside `package.json` `nodemonConfig`.
 #### `npm run lint`
-Check code style. All rules are inside `.eslintrc`.
+Check code style. All rules are inside `.eslintrc.js`.
 #### `npm run lint:fix`
 Fix code style issues automatically including prettier formatting.
 #### `npm run start`
