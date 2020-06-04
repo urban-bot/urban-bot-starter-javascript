@@ -46,4 +46,4 @@ Start code from `dist` folder.
 #### `npm run start-tunnel`
 Start a public URL for exposing your local server.
 #### `npm run test`
-Start your tests. File matching `*.test.(js|ts|tsx)`.
+Start your tests. File matching `*.test.(js|ts|...)`.
