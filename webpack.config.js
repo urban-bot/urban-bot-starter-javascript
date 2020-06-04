@@ -2,12 +2,12 @@ const path = require('path');
 
 module.exports = (env, argv) => ({
     entry: './src/index.js',
-    mode: 'development',
+    mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
     },
-    devtool: argv.mode === 'development' ? 'inline-source-map' : undefined,
+    devtool: argv.mode === 'development' ? 'eval-cheap-module-source-map' : undefined,
     plugins: [],
     module: {
         rules: [

@@ -12,7 +12,7 @@
     "dist/**/*"
   ],
   "scripts": {
-    "build": "webpack --mode=production",
+    "build": "webpack",
     "dev": "nodemon",
     "lint": "eslint \"./src\" --ext .js,.jsx",
     "lint:fix": "npm run lint -- --fix",
@@ -78,7 +78,7 @@
       "src"
     ],
     "ext": "js",
-    "exec": "webpack && node ./dist/index.js"
+    "exec": "webpack --mode=development && node ./dist/index.js"
   },
   "jest": {
     "testEnvironment": "node",
