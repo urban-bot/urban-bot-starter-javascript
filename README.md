@@ -5,7 +5,7 @@ Develop chatbots with zero configuration using javascript.
 
 ## Launch
 ```shell
-npx create-urban-bot my-app
+npx create-urban-bot my-app --template js
 ```
 
 ### Telegram
