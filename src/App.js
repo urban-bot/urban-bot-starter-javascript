@@ -1,6 +1,9 @@
 import React from 'react';
+import fs from 'fs';
 import { Route, Router, Text, ButtonGroup, Button, useText, Image } from '@urban-bot/core';
-import penguinFromFile from './assets/penguin.jpg';
+import penguinFile from './assets/penguin.jpg';
+
+const penguinFileStream = fs.createReadStream(penguinFile);
 
 function Echo() {
     const [text, setText] = React.useState('Say something');
@@ -26,7 +29,7 @@ function Counter() {
     return (
         <Image
             title={title}
-            file={penguinFromFile}
+            file={penguinFileStream}
             buttons={
                 <ButtonGroup>
                     <Button onClick={addPenguin}>Add penguin</Button>
