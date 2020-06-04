@@ -19,7 +19,8 @@ module.exports = (env, argv) => ({
                 },
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(?!jsx?).+$/i,
+                exclude: /node_modules/,
                 use: [
                     {
                         loader: 'file-loader',
