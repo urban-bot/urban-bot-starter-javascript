@@ -27,9 +27,10 @@ function Counter() {
 
     return (
         <Image
+            title="Penguin"
             file={image}
             buttons={
-                <ButtonGroup title="Penguin">
+                <ButtonGroup>
                     <Button onClick={toggleImage}>Toggle penguin</Button>
                 </ButtonGroup>
             }
