@@ -1,10 +1,10 @@
 {
-  "name": "@urban-bot/starter",
+  "name": "@urban-bot/starter-javascript",
   "version": "0.0.1",
-  "description": "Start write chatbots with urban-bot",
+  "description": "Start write chatbots with urban-bot and javascript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/urban-bot/urban-bot-starter.git"
+    "url": "https://github.com/urban-bot/urban-bot-starter-javascript.git"
   },
   "license": "MIT",
   "main": "dist/index.js",
@@ -12,30 +12,24 @@
     "dist/**/*"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "webpack",
     "dev": "nodemon",
     "lint": "eslint \"./src/**\"",
     "lint:fix": "npm run lint -- --fix",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "start-tunnel": "ngrok http 8080",
-    "test": "jest",
-    "typecheck": "tsc --noEmit"
+    "test": "jest"
   },
   "dependencies": {
-    "@types/react": "^16.9.34",
     "@urban-bot/core": "0.0.7",
     "@urban-bot/facebook": "0.0.7",
     "@urban-bot/slack": "0.0.7",
     "@urban-bot/telegram": "0.0.7",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
-    "react": "^16.13.1",
-    "typescript": "^3.8.3"
+    "react": "^16.13.1"
   },
   "devDependencies": {
-    "@types/jest": "^25.2.1",
-    "@typescript-eslint/eslint-plugin": "^2.29.0",
-    "@typescript-eslint/parser": "^2.29.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
@@ -46,8 +40,7 @@
     "jest": "^25.4.0",
     "ngrok": "^3.2.7",
     "nodemon": "^2.0.3",
-    "prettier": "^2.0.5",
-    "ts-jest": "^25.4.0"
+    "prettier": "^2.0.5"
   },
   "engines": {
     "node": ">=10.0.0"

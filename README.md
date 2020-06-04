@@ -1,7 +1,7 @@
 
 # Urban Bot Starter
 
-Develop chatbots with zero configuration using typescript.
+Develop chatbots with zero configuration using javascript.
 
 ## Launch
 ```shell
@@ -44,6 +44,4 @@ Start code from `dist` folder.
 #### `npm run start-tunnel`
 Start a public URL for exposing your local server.
 #### `npm run test`
-Start your tests. File matching `*.test.(js|ts|tsx)`
-#### `npm run typecheck`
-Check typescript errors.
+Start your tests. File matching `*.test.(js|ts|tsx)`.
