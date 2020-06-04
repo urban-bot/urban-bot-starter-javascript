@@ -17,21 +17,19 @@ function Echo() {
 }
 
 function Counter() {
-    const [image, setImage] = React.useState(penguinFromFile);
-    const penguinFromURL = 'https://ibb.co/GR241dP';
+    const [title, setTitle] = React.useState('Penguin');
 
-    const toggleImage = () => {
-        const nextImage = image === penguinFromFile ? penguinFromURL : penguinFromFile;
-        setImage(nextImage);
+    const addPenguin = () => {
+        setTitle(title + '🐧');
     };
 
     return (
         <Image
-            title="Penguin"
-            file={image}
+            title={title}
+            file={penguinFromFile}
             buttons={
                 <ButtonGroup>
-                    <Button onClick={toggleImage}>Toggle penguin</Button>
+                    <Button onClick={addPenguin}>Add penguin</Button>
                 </ButtonGroup>
             }
         />
