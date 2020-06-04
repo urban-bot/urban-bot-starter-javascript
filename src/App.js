@@ -20,7 +20,10 @@ function Counter() {
     const [image, setImage] = React.useState(penguinFromFile);
     const penguinFromURL = 'https://ibb.co/GR241dP';
 
-    const toggleImage = () => setImage(image === penguinFromFile ? penguinFromURL : penguinFromFile);
+    const toggleImage = () => {
+        const nextImage = image === penguinFromFile ? penguinFromURL : penguinFromFile;
+        setImage(nextImage);
+    };
 
     return (
         <Image
