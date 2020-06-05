@@ -77,7 +77,7 @@
         "watch": [
             "src"
         ],
-        "ext": "js",
+        "ext": "js,jsx,json",
         "exec": "webpack --mode=development && node ./dist/index.js"
     },
     "jest": {
