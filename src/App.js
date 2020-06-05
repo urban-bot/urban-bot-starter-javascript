@@ -20,7 +20,7 @@ function Echo() {
 }
 
 function Logo() {
-    const [title, setTitle] = useState('Logo');
+    const [title, setTitle] = useState('Urban Bot');
 
     const addRobot = () => {
         setTitle(title + '🤖');
@@ -45,7 +45,7 @@ export function App() {
             <Route path="/start">
                 <Echo />
             </Route>
-            <Route path="/image">
+            <Route path="/logo">
                 <Logo />
             </Route>
         </Router>
