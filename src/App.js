@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import fs from 'fs';
 import { Route, Router, Text, ButtonGroup, Button, useText, Image } from '@urban-bot/core';
-import logo from './assets/logo.png';
+import logoPath from './assets/logo.png';
 
-const logoFileStream = fs.createReadStream(logo);
+const logoFile = fs.readFileSync(logoPath);
 
 function Echo() {
-    const [text, setText] = React.useState('Say something');
+    const [text, setText] = useState('Say something');
 
     useText(({ text }) => {
         setText(text);
@@ -20,7 +20,7 @@ function Echo() {
 }
 
 function Logo() {
-    const [title, setTitle] = React.useState('Logo');
+    const [title, setTitle] = useState('Logo');
 
     const addRobot = () => {
         setTitle(title + '🤖');
@@ -29,7 +29,7 @@ function Logo() {
     return (
         <Image
             title={title}
-            file={logoFileStream}
+            file={logoFile}
             buttons={
                 <ButtonGroup>
                     <Button onClick={addRobot}>Add robot</Button>
