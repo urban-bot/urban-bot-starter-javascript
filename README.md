@@ -47,3 +47,19 @@ Start code from `dist` folder.
 Start a public URL for exposing your local server.
 #### `npm run test`
 Start your tests. File matching `*.test.(js|jsx)`.
+
+## Import files
+You could import any file except js,jsx and paste to components as buffer or stream. It will be automatically in dist bundle.
+```jsx
+import image from './assets/logo.png';
+import document from './assets/document.doc';
+
+function App() {
+  return (
+    <>
+      <Image file={fs.createReadStream(image)} />
+      <File file={fs.readFileSync(document)} />
+    </>
+  );
+}
+```
