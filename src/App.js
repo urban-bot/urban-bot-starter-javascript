@@ -3,8 +3,6 @@ import fs from 'fs';
 import { Route, Router, Text, ButtonGroup, Button, useText, Image } from '@urban-bot/core';
 import logoPath from './assets/logo.png';
 
-const logoFile = fs.readFileSync(logoPath);
-
 function Echo() {
     const [text, setText] = useState('Say something');
 
@@ -29,7 +27,7 @@ function Logo() {
     return (
         <Image
             title={title}
-            file={logoFile}
+            file={fs.createReadStream(logoPath)}
             buttons={
                 <ButtonGroup>
                     <Button onClick={addRobot}>Add robot</Button>
