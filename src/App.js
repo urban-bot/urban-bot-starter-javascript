@@ -1,9 +1,9 @@
 import React from 'react';
 import fs from 'fs';
 import { Route, Router, Text, ButtonGroup, Button, useText, Image } from '@urban-bot/core';
-import penguinFile from './assets/penguin.jpg';
+import logo from './assets/logo.png';
 
-const penguinFileStream = fs.createReadStream(penguinFile);
+const logoFileStream = fs.createReadStream(logo);
 
 function Echo() {
     const [text, setText] = React.useState('Say something');
@@ -19,20 +19,20 @@ function Echo() {
     );
 }
 
-function Counter() {
-    const [title, setTitle] = React.useState('Penguin');
+function Logo() {
+    const [title, setTitle] = React.useState('Logo');
 
-    const addPenguin = () => {
-        setTitle(title + '🐧');
+    const addRobot = () => {
+        setTitle(title + '🤖');
     };
 
     return (
         <Image
             title={title}
-            file={penguinFileStream}
+            file={logoFileStream}
             buttons={
                 <ButtonGroup>
-                    <Button onClick={addPenguin}>Add penguin</Button>
+                    <Button onClick={addRobot}>Add robot</Button>
                 </ButtonGroup>
             }
         />
@@ -46,7 +46,7 @@ export function App() {
                 <Echo />
             </Route>
             <Route path="/image">
-                <Counter />
+                <Logo />
             </Route>
         </Router>
     );
