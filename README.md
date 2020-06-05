@@ -52,13 +52,13 @@ Start your tests. File matching `*.test.(js|jsx)`.
 You could import any file and paste to components as buffer or stream. It will be automatically added to dist bundle.
 ```jsx
 import image from './assets/logo.png';
-import document from './assets/document.doc';
+import doc from './assets/document.doc';
 
 function App() {
   return (
     <>
       <Image file={fs.createReadStream(image)} />
-      <File file={fs.readFileSync(document)} />
+      <File file={fs.readFileSync(doc)} />
     </>
   );
 }
