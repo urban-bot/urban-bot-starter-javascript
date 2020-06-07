@@ -1,6 +1,6 @@
 {
     "name": "@urban-bot/starter-javascript",
-    "version": "0.0.1",
+    "version": "0.0.8",
     "description": "Start write chatbots with urban-bot and javascript",
     "repository": {
         "type": "git",
@@ -24,10 +24,10 @@
         "@babel/core": "^7.10.2",
         "@babel/preset-env": "^7.10.2",
         "@babel/preset-react": "^7.10.1",
-        "@urban-bot/core": "0.0.7",
-        "@urban-bot/facebook": "0.0.7",
-        "@urban-bot/slack": "0.0.7",
-        "@urban-bot/telegram": "0.0.7",
+        "@urban-bot/core": "0.0.8",
+        "@urban-bot/facebook": "0.0.8",
+        "@urban-bot/slack": "0.0.8",
+        "@urban-bot/telegram": "0.0.8",
         "babel-loader": "^8.1.0",
         "dotenv": "^8.2.0",
         "file-loader": "^6.0.0",
