@@ -1,7 +1,7 @@
 ![](https://i.ibb.co/6PWkWbd/js.png)
 # Urban Bot Starter
 
-Develop chatbots with zero configuration using javascript.
+Develop chatbots with zero configuration using javascript. If you want to use typescript use [ts starter](https://github.com/urban-bot/urban-bot-starter-typescript).
 
 ## Launch
 ```shell
