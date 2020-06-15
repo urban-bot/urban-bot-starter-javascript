@@ -22,7 +22,7 @@ module.exports = (env, argv) => ({
             },
             {
                 test: /.+/,
-                exclude: /node_modules|(\.(jsx?|tsx?)$)/,
+                exclude: /node_modules|(\.(jsx?|json)$)/,
                 use: [
                     {
                         loader: 'file-loader',
