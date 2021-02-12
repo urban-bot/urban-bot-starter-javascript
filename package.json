@@ -21,36 +21,36 @@
         "test": "jest"
     },
     "dependencies": {
-        "@babel/core": "^7.10.2",
-        "@babel/preset-env": "^7.10.2",
-        "@babel/preset-react": "^7.10.1",
-        "@urban-bot/core": "^0.2.0",
-        "@urban-bot/facebook": "^0.2.0",
-        "@urban-bot/slack": "^0.2.0",
-        "@urban-bot/telegram": "^0.2.0",
-        "babel-loader": "^8.1.0",
+        "@babel/core": "^7.12.16",
+        "@babel/preset-env": "^7.12.16",
+        "@babel/preset-react": "^7.12.13",
+        "@urban-bot/core": "^0.2.1",
+        "@urban-bot/facebook": "^0.2.1",
+        "@urban-bot/slack": "^0.2.1",
+        "@urban-bot/telegram": "^0.2.1",
+        "babel-loader": "^8.2.2",
         "dotenv": "^8.2.0",
-        "file-loader": "^6.0.0",
+        "file-loader": "^6.2.0",
         "react": "^16.14.0",
-        "webpack": "^4.43.0",
-        "webpack-cli": "^3.3.11",
-        "webpack-node-externals": "^1.7.2"
+        "webpack": "^5.21.2",
+        "webpack-cli": "^4.5.0",
+        "webpack-node-externals": "^2.5.2"
     },
     "devDependencies": {
-        "eslint": "^6.8.0",
-        "eslint-config-prettier": "^6.11.0",
-        "eslint-plugin-import": "^2.20.2",
-        "eslint-plugin-jest": "^23.8.2",
-        "eslint-plugin-prettier": "^3.1.3",
-        "eslint-plugin-react": "^7.19.0",
-        "eslint-plugin-react-hooks": "^3.0.0",
-        "jest": "^25.4.0",
-        "ngrok": "^3.2.7",
-        "nodemon": "^2.0.3",
-        "prettier": "^2.0.5"
+        "eslint": "^7.19.0",
+        "eslint-config-prettier": "^7.2.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jest": "^24.1.3",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-react": "^7.22.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "jest": "^26.6.3",
+        "ngrok": "^3.4.0",
+        "nodemon": "^2.0.7",
+        "prettier": "^2.2.1"
     },
     "engines": {
-        "node": ">=10.0.0"
+        "node": ">=12.0.0"
     },
     "babel": {
         "presets": [
@@ -58,7 +58,7 @@
                 "@babel/preset-env",
                 {
                     "targets": {
-                        "node": "10"
+                        "node": "12"
                     }
                 }
             ],
