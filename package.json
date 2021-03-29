@@ -21,7 +21,7 @@
         "test": "jest"
     },
     "dependencies": {
-        "@babel/core": "^7.12.16",
+        "@babel/core": "^7.13.13",
         "@babel/preset-env": "^7.12.16",
         "@babel/preset-react": "^7.12.13",
         "@urban-bot/core": "^0.2.3",
