@@ -23,6 +23,7 @@ module.exports = {
         'react/prop-types': 'off',
         'no-unused-vars': ['error', { varsIgnorePattern: '_.+', argsIgnorePattern: '_.+' }],
         'prettier/prettier': 'warn',
+        'react/react-in-jsx-scope': 'off',
     },
     settings: {
         'import/resolver': {

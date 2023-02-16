@@ -1,6 +1,6 @@
 {
     "name": "@urban-bot/starter-javascript",
-    "version": "0.3.8",
+    "version": "1.0.1",
     "description": "Start write chatbots with urban-bot and javascript",
     "repository": {
         "type": "git",
@@ -21,34 +21,34 @@
         "test": "jest"
     },
     "dependencies": {
-        "@babel/core": "^7.12.16",
-        "@babel/preset-env": "^7.12.16",
-        "@babel/preset-react": "^7.12.13",
-        "@urban-bot/core": "^0.3.8",
-        "@urban-bot/discord": "^0.3.8",
-        "@urban-bot/facebook": "^0.3.8",
-        "@urban-bot/slack": "^0.3.8",
-        "@urban-bot/telegram": "^0.3.8",
-        "babel-loader": "^8.2.2",
-        "dotenv": "^8.2.0",
+        "@babel/core": "^7.20.12",
+        "@babel/preset-env": "^7.20.2",
+        "@babel/preset-react": "^7.18.6",
+        "@urban-bot/core": "^1.0.1",
+        "@urban-bot/discord": "^1.0.1",
+        "@urban-bot/facebook": "^1.0.1",
+        "@urban-bot/slack": "^1.0.1",
+        "@urban-bot/telegram": "^0.0.8",
+        "babel-loader": "^9.1.2",
+        "dotenv": "^16.0.3",
         "file-loader": "^6.2.0",
-        "react": "^16.14.0",
-        "webpack": "^5.21.2",
-        "webpack-cli": "^4.5.0",
-        "webpack-node-externals": "^2.5.2"
+        "react": "^18.2.0",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.1",
+        "webpack-node-externals": "^3.0.0"
     },
     "devDependencies": {
-        "eslint": "^8.8.0",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-import": "^2.25.4",
-        "eslint-plugin-jest": "^26.0.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-react": "^7.28.0",
-        "eslint-plugin-react-hooks": "^4.3.0",
-        "jest": "^27.4.7",
+        "eslint": "^8.34.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-jest": "^27.2.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "jest": "^29.4.3",
         "ngrok": "^4.3.0",
-        "nodemon": "^2.0.15",
-        "prettier": "^2.5.1"
+        "nodemon": "^2.0.20",
+        "prettier": "^2.8.4"
     },
     "engines": {
         "node": ">=14.0.0"
@@ -63,7 +63,7 @@
                     }
                 }
             ],
-            "@babel/react"
+            ["@babel/preset-react", {"runtime": "automatic"}]
         ]
     },
     "prettier": {
