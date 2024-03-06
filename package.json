@@ -1,6 +1,6 @@
 {
     "name": "@urban-bot/starter-javascript",
-    "version": "1.0.1",
+    "version": "1.0.7",
     "description": "Start write chatbots with urban-bot and javascript",
     "repository": {
         "type": "git",
